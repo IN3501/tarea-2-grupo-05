@@ -1,0 +1,104 @@
+
+{% extends 'navbar.html' %}
+
+{% block title %}
+Registro
+{% endblock title %}
+
+{% block content %}
+<head>
+<style>
+.button {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  border-radius:8px;
+  white-space: nowrap;
+  padding: 10px 12px;
+  text-align: right;
+  text-decoration: none;
+  display: inline-block;
+  font-size:22px;
+  margin: 22px 500px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<div id="descripcion" class="container">
+    <h2 class="text-center"> Registro de usuario </h2>
+
+<!-- En este segmento debemos indicarle al formulario qué hacer cuando se hace clic en el botón submit -->
+    <form action="/recuperar" method="POST" autocomplete="off">  {% csrf_token %}
+      
+    <div class="form-group">
+      <label for="exampleInputEmail1">Ingrese su nombre</label>
+      <input type="text" class="form-control" id="exampleText" placeholder="Nombre" name="inputText">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Ingrese sus apellido</label>
+      <input type="text" class="form-control" id="exampleText" placeholder="Apellidos" name="inputText">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleNumber">Ingrese su rut</label>
+      <input type="number" class="form-control" id="exampleNumber" placeholder="Rut" name="inputNumber">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleNumber">Fecha de nacimiento</label>
+      <input type="date" class="form-control" id="exampleDate" placeholder="Ingrese Fecha" name="inputDate">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Ingrese su mail</label>
+      <input type="email" class="form-control" id="exampleEmail" placeholder="Email" name="inputEmail">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Cree un usuario</label>
+      <input type="text" class="form-control" id="exampleText" placeholder="Ingrese usuario" name="inputText2">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputPassword1">Cree una contraseña</label>
+      <input type="password" class="form-control" id="examplePassword" placeholder="ingrese contraseña" name="inputPassword">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputPassword1">Reingrese la contraseña</label>
+      <input type="password" class="form-control" id="examplePassword" placeholder="Reingrese contraseña" name="inputPassword">
+    </div>
+
+    Tipo de Usuario
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="Cliente" checked>
+      <label class="form-check-label" for="exampleRadios1">
+        Cliente
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="Administración">
+      <label class="form-check-label" for="exampleRadios2">
+        Administración
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleFile">Seleccione foto de usuario</label>
+      <input type="file" class="form-control-file" id="exampleFile">
+    </div>
+
+    <br>
+
+
+    <div class="form-group">
+    <button type="submit" class="button">Crear Usuario</button>
+    </div>
+  
+  </form>
+       
+</div>
+
+{% endblock content %}
