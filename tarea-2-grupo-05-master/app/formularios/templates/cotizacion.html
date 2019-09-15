@@ -1,0 +1,87 @@
+
+{% extends 'navbar.html' %}
+
+{% block title %}
+Cotización
+{% endblock title %}
+
+{% block content %}
+<div id="descripcion" class="container">
+    <h1>Cotización</h1>
+
+<!-- En este segmento debemos indicarle al formulario qué hacer cuando se hace clic en el botón submit -->
+    <form action="/recuperar3" method="POST" autocomplete="off">  {% csrf_token %}
+
+    <form action="#" autocomplete="off">
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Nombre</label>
+      <input type="text" class="form-control" id=“Nombre” placeholder="Ingrese texto" name="inputText3">
+    </div>
+
+<div class="form-group">
+      <label for="exampleNumber">Numero de contacto</label>
+      <input type="number" class="form-control" id="exampleNumber" placeholder="Ingrese numero" name="inputNumber">
+    </div>
+
+<div class="form-group">
+      <label for="exampleNumber">Rut</label>
+      <input type="number" class="form-control" id="exampleNumber" placeholder="Ingrese Rut" name="inputNumber2">
+    </div>
+
+ <div class="form-group">
+      <label for="exampleInputEmail1">email</label>
+      <input type="email" class="form-control" id="exampleEmail" placeholder="Ingrese email" name="inputEmail">
+    </div>
+
+ <div class="form-group">
+      <label for="exampleInputEmail1">Dirección</label>
+      <input type="text" class="form-control" id=“Nombre” placeholder="Ingrese Dirección" name="inputText4">
+    </div>
+
+<div class="form-group">
+      <label for="exampleFormControlSelect1">Región</label>
+      <select class="form-control" id="exampleSelect" name="input Select">
+        <option value="1">Region</option>
+        <option value="2">Control de accesos</option>
+        <option value="3">Automatización de accesos</option>
+        <option value="4">Análisis energético</option>
+        <option value=“5”>Energías renovables y eficiencia energética</option>
+      </select>
+    </div>
+
+<div class="form-group">
+      <label for="exampleFormControlSelect1">Tipo de servicio a solicitar</label>
+      <select class="form-control" id="exampleSelect" name="input Select2">
+        <option value="1">Región de Arica y Parinacota</option>
+        <option value="2">Región de tarapacá</option>
+        <option value="3">Región de Antofagasta</option>
+        <option value="4">Región de Atacama</option>
+        <option value=“5”>Región de Coquimbo</option>
+        <option value="6">Región de Valparáiso</option>
+        <option value="7">Región de Libertador Bernardo O'Higgins</option>
+        <option value="8">Región del Maule</option>
+        <option value="9">Región del Bío-Bío</option>
+        <option value="10">Región de La Araucanía</option>
+        <option value="11">Región de Los Ríos</option>
+        <option value="12">Región de Los Lagos</option>
+        <option value="13">Región de Aysén</option>
+        <option value="14">Región de Magallanes </option>
+        <option value="15">Región Metropolitana</option>
+      </select>
+    </div>
+
+<div class="form-group">
+      <label for="exampleFormControlTextarea">Descripcion del proyecto a realizar:</label>
+      <textarea class="form-control" id="exampleFormControlTextarea" rows="5" name="textA"></textarea>
+    </div>
+
+<div class="form-group">
+    <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+  
+  </form>
+       
+</div>
+
+{% endblock content %}
