@@ -1,0 +1,55 @@
+
+{% extends 'navbar.html' %}
+
+{% block title %}
+Iniciar Sesión
+{% endblock title %}
+
+{% block content %}
+<head>
+<style>
+.button {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  border-radius:8px;
+  white-space: nowrap;
+  padding: 10px 12px;
+  text-align: right;
+  text-decoration: none;
+  display: inline-block;
+  font-size:22px;
+  margin: 22px 500px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<div id="descripcion" class="container">
+
+<!-- En este segmento debemos indicarle al formulario qué hacer cuando se hace clic en el botón submit -->
+    <form action="/recuperar2" method="POST" autocomplete="off">  {% csrf_token %}
+
+    <div class="form-group">
+        <h2 class="text-center">Ingrese su cuenta</h2>       
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Username" required="required" name=inputText>
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" placeholder="Password" required="required">
+        </div>
+
+
+
+
+    <div class="form-group">
+    <button type="submit" class="button">Log in</button>
+    </div>
+	
+
+  
+  </form>
+       
+</div>
+
+{% endblock content %}
